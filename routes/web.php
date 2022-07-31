@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/bot', function () {
+    $text = (new \ChatBot\Domain\Message\Entities\Text(1))->message('Hello World!');
+    dd($text);
+});
