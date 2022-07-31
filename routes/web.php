@@ -21,3 +21,8 @@ Route::get('/bot', function () {
     $text = (new \ChatBot\Domain\Message\Entities\Text(1))->message('Hello World!');
     dd($text);
 });
+
+Route::prefix('chatbot')->group(function () {
+    Route::get('/webhook', 'ChatBotController@subscribe');
+    Route::post('/webhook', 'ChatBotController@receiveMessage');
+});
