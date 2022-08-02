@@ -25,9 +25,9 @@ class ChatBotController extends Controller
 
     public function receiveMessage(Request $request)
     {
-
-        var_dump($_REQUEST);
-        logger($_REQUEST);
+        file_put_contents("php://stderr", $_REQUEST);
+        //var_dump($_REQUEST);
+       // logger($_REQUEST);
 
 //        $senderMessage = new SenderMessage();
 //        $recipientId = $senderMessage->getRecipientId();
