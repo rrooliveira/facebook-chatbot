@@ -27,9 +27,10 @@ class ChatBotController extends Controller
     {
         $senderMessage = new SenderMessage();
         $senderId = $senderMessage->getSenderId();
+        $recipientId = $senderMessage->getRecipientId();
         $message = $senderMessage->getMessage();
 
-        $text = new Text($senderId);
+        $text = new Text($recipientId);
         $httpClient = new Guzzle(config('chatbotfacebook.pageAccessToken'));
 
         try {
