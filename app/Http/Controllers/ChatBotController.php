@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use ChatBot\Domain\Message\Entities\Text;
+use ChatBot\Domain\Message\Entities\Video;
 use ChatBot\Domain\Message\Services\SenderMessage;
 use ChatBot\Domain\Message\Services\WebHook;
 use ChatBot\Infrastructure\HttpClient\Guzzle\Guzzle;
@@ -33,18 +34,25 @@ class ChatBotController extends Controller
         $recipientId = $senderMessage->getSenderId();
         $message = $senderMessage->getMessage();
 
-        $text = new Text($recipientId);
+        //$text = new Text($recipientId);
+        $video = new Video($recipientId);
         $httpClient = new Guzzle(config('chatbotfacebook.pageAccessToken'));
 
         try {
-            $text->setMessage('Olá, eu sou o bot...');
-            $httpClient->post($text->getMessage());
+//            $text->setMessage('Olá, eu sou o bot...');
+//            $httpClient->post($text->getMessage());
+//
+//            $text->setMessage('Você digitou a mensagem abaixo.');
+//            $httpClient->post($text->getMessage());
+//
+//            $text->setMessage($message);
+//            $httpClient->post($text->getMessage());
 
-            $text->setMessage('Você digitou a mensagem abaixo.');
-            $httpClient->post($text->getMessage());
+            $video->setMessage('Veja o mestre empinando pipa...');
+            $httpClient->post($video->getMessage());
 
-            $text->setMessage($message);
-            $httpClient->post($text->getMessage());
+            $video->setMessage('https://www.youtube.com/watch?v=vEqoBHXvefE');
+            $httpClient->post($video->getMessage());
 
             return '';
 
