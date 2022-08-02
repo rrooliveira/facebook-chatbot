@@ -6,7 +6,6 @@ use ChatBot\Domain\Message\Entities\Text;
 use ChatBot\Domain\Message\Services\SenderMessage;
 use ChatBot\Domain\Message\Services\WebHook;
 use ChatBot\Infrastructure\HttpClient\Guzzle\Guzzle;
-use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Http\Request;
 
