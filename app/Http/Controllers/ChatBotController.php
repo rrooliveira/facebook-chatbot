@@ -26,7 +26,6 @@ class ChatBotController extends Controller
     public function receiveMessage(Request $request)
     {
         $senderMessage = new SenderMessage();
-        $senderId = $senderMessage->getSenderId();
         $recipientId = $senderMessage->getRecipientId();
         $message = $senderMessage->getMessage();
 
@@ -34,10 +33,9 @@ class ChatBotController extends Controller
         $httpClient = new Guzzle(config('chatbotfacebook.pageAccessToken'));
 
         try {
-
-            $httpClient->post([$text->message('Olá, eu sou o bot...')]);
-            $httpClient->post([$text->message('Você digitou a mensagem abaixo.')]);
-            $httpClient->post([$text->message($message)]);
+            $httpClient->post($text->message('Olá, eu sou o bot...'));
+            $httpClient->post($text->message('Você digitou a mensagem abaixo.'));
+            $httpClient->post($text->message($message));
 
             return '';
 
