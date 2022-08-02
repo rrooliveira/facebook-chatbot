@@ -16,10 +16,6 @@ class ChatBotController extends Controller
         $webHook = new WebHook();
         $subscribe = $webHook->check(config('chatbotfacebook.validationToken'));
 
-        echo env('FB_VALIDATION_TOKEN') . '<br>';
-        echo $subscribe . ' - SUBSCRIBE';
-        die();
-
         if (!$subscribe) {
             abort(403, 'Unauthorized Action.');
         }
