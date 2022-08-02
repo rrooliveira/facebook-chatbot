@@ -35,9 +35,9 @@ class ChatBotController extends Controller
 
         try {
 
-            $httpClient->post(['message' => $text->message('Olá, eu sou o bot...')]);
-            $httpClient->post(['message' => $text->message('Você digitou a mensagem abaixo.')]);
-            $httpClient->post(['message' => $text->message($message)]);
+            $httpClient->post([$text->message('Olá, eu sou o bot...')]);
+            $httpClient->post([$text->message('Você digitou a mensagem abaixo.')]);
+            $httpClient->post([$text->message($message)]);
 
             return '';
 
