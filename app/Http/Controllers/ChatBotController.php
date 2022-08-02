@@ -25,6 +25,7 @@ class ChatBotController extends Controller
 
     public function receiveMessage(Request $request)
     {
+        //TO DEBUG VALUES ON HEROKU LOGS
         //file_put_contents("php://stderr", json_encode($request->post()));
 
         $senderMessage = new SenderMessage();
@@ -36,9 +37,14 @@ class ChatBotController extends Controller
         $httpClient = new Guzzle(config('chatbotfacebook.pageAccessToken'));
 
         try {
-            $httpClient->post($text->message('Olá, eu sou o bot...'));
-            $httpClient->post($text->message('Você digitou a mensagem abaixo.'));
-            $httpClient->post($text->message($message));
+            $text->setMessage('Olá, eu sou o bot...');
+            $httpClient->post($text->getMessage());
+
+            $text->setMessage('Você digitou a mensagem abaixo.');
+            $httpClient->post($text->getMessage());
+
+            $text->setMessage($message);
+            $httpClient->post($text->getMessage());
 
             return '';
 
