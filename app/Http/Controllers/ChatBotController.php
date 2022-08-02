@@ -20,7 +20,7 @@ class ChatBotController extends Controller
             abort(403, 'Unauthorized Action.');
         }
 
-        return $subscribe;
+        return response()->json($subscribe);
     }
 
     public function receiveMessage(Request $request)
