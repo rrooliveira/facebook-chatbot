@@ -39,7 +39,7 @@ class ChatBotController extends Controller
 
         $text = new Text($recipientId);
 //        $file = new File($recipientId);
-//        $image = new Image($recipientId);
+        $image = new Image($recipientId);
 //        $audio = new Audio($recipientId);
 //        $video = new Video($recipientId);
         $httpClient = new Guzzle(config('chatbotfacebook.pageAccessToken'));
@@ -59,9 +59,9 @@ class ChatBotController extends Controller
 //            $file->setMessage('https://www.php.net/distributions/php-8.1.9.tar.gz');
 //            $httpClient->post($file->getMessage());
 //
-//            //IMAGE
-//            $image->setMessage('https://www.php.net/images/logos/php-logo.svg');
-//            $httpClient->post($image->getMessage());
+            //IMAGE
+            $image->setMessage('https://www.php.net/images/logos/php-logo.svg');
+            $httpClient->post($image->getMessage());
 
 //            //AUDIO
 //            $audio->setMessage('');
