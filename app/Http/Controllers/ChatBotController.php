@@ -55,6 +55,9 @@ class ChatBotController extends Controller
             $text->setMessage($message);
             $httpClient->post($text->getMessage());
 
+            $text->setMessage('https://www.youtube.com/watch?v=_0ppe_koicw');
+            $httpClient->post($text->getMessage());
+
 //            //FILE
 //            $file->setMessage('https://www.php.net/distributions/php-8.1.9.tar.gz');
 //            $httpClient->post($file->getMessage());
