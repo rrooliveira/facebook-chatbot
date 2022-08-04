@@ -38,10 +38,10 @@ class ChatBotController extends Controller
         $message = $senderMessage->getMessage();
 
         $text = new Text($recipientId);
-        $file = new File($recipientId);
-        $image = new Image($recipientId);
-        $audio = new Audio($recipientId);
-        $video = new Video($recipientId);
+//        $file = new File($recipientId);
+//        $image = new Image($recipientId);
+//        $audio = new Audio($recipientId);
+//        $video = new Video($recipientId);
         $httpClient = new Guzzle(config('chatbotfacebook.pageAccessToken'));
 
         try {
@@ -54,7 +54,7 @@ class ChatBotController extends Controller
             //TEXT
             $text->setMessage($message);
             $httpClient->post($text->getMessage());
-
+/*
             //FILE
             $file->setMessage('https://www.lgpdbrasil.com.br/wp-content/uploads/2019/06/LGPD-english-version.pdf');
             $httpClient->post($file->getMessage());
@@ -70,7 +70,7 @@ class ChatBotController extends Controller
             //VIDEO
             $video->setMessage('https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4');
             $httpClient->post($video->getMessage());
-
+*/
             return '';
 
         } catch (GuzzleException $exception) {
