@@ -40,8 +40,8 @@ class ChatBotController extends Controller
         $text = new Text($recipientId);
         $file = new File($recipientId);
         $image = new Image($recipientId);
-//        $audio = new Audio($recipientId);
-//        $video = new Video($recipientId);
+        $audio = new Audio($recipientId);
+        $video = new Video($recipientId);
         $httpClient = new Guzzle(config('chatbotfacebook.pageAccessToken'));
 
         try {
@@ -55,9 +55,9 @@ class ChatBotController extends Controller
             $text->setMessage($message);
             $httpClient->post($text->getMessage());
 
-            //FILE
-            $file->setMessage('https://www.php.net/distributions/php-8.1.9.tar.gz');
-            $httpClient->post($file->getMessage());
+//            //FILE
+//            $file->setMessage('https://www.php.net/distributions/php-8.1.9.tar.gz');
+//            $httpClient->post($file->getMessage());
 
             //IMAGE
             $image->setMessage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4xoX55-BGtjBTQKxa3wDE01Y7-iO-PJV-Y7jJfWFFuYY_xx4XUYXMmb-S5GvRZi2ZW8w&usqp=CAU');
@@ -67,9 +67,9 @@ class ChatBotController extends Controller
 //            $audio->setMessage('');
 //            $httpClient->post($audio->getMessage());
 //
-//            //VIDEO
-//            $video->setMessage('');
-//            $httpClient->post($video->getMessage());
+            //VIDEO
+            $video->setMessage('https://www.youtube.com/watch?v=_0ppe_koicw');
+            $httpClient->post($video->getMessage());
 
             return '';
 
