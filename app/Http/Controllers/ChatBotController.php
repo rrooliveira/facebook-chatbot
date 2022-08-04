@@ -60,7 +60,7 @@ class ChatBotController extends Controller
 //            $httpClient->post($file->getMessage());
 //
             //IMAGE
-            $image->setMessage('https://www.php.net/images/logos/php-logo.svg');
+            $image->setMessage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4xoX55-BGtjBTQKxa3wDE01Y7-iO-PJV-Y7jJfWFFuYY_xx4XUYXMmb-S5GvRZi2ZW8w&usqp=CAU');
             $httpClient->post($image->getMessage());
 
 //            //AUDIO
