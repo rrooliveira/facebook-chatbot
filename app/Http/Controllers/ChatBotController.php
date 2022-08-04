@@ -68,8 +68,8 @@ class ChatBotController extends Controller
 //            $httpClient->post($audio->getMessage());
 //
             //VIDEO
-            $video->setMessage('https://www.youtube.com/watch?v=_0ppe_koicw');
-            $httpClient->post($video->getMessage());
+//            $video->setMessage('https://www.youtube.com/watch?v=_0ppe_koicw');
+//            $httpClient->post($video->getMessage());
 
             return '';
 
