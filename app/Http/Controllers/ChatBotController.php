@@ -45,33 +45,30 @@ class ChatBotController extends Controller
         $httpClient = new Guzzle(config('chatbotfacebook.pageAccessToken'));
 
         try {
-//            $text->setMessage('Olá, eu sou o bot...');
-//            $httpClient->post($text->getMessage());
-//
-//            $text->setMessage('Você digitou a mensagem abaixo.');
-//            $httpClient->post($text->getMessage());
-//
-//            //TEXT
-//            $text->setMessage($message);
-//            $httpClient->post($text->getMessage());
-//
-//            $text->setMessage('https://www.youtube.com/watch?v=_0ppe_koicw');
-//            $httpClient->post($text->getMessage());
+            $text->setMessage('Olá, eu sou o bot...');
+            $httpClient->post($text->getMessage());
 
-//            //FILE
-//            $file->setMessage('https://www.php.net/distributions/php-8.1.9.tar.gz');
-//            $httpClient->post($file->getMessage());
+            $text->setMessage('Você digitou a mensagem abaixo.');
+            $httpClient->post($text->getMessage());
+
+            //TEXT
+            $text->setMessage($message);
+            $httpClient->post($text->getMessage());
+
+            //FILE
+            $file->setMessage('https://www.lgpdbrasil.com.br/wp-content/uploads/2019/06/LGPD-english-version.pdf');
+            $httpClient->post($file->getMessage());
 
             //IMAGE
-//            $image->setMessage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4xoX55-BGtjBTQKxa3wDE01Y7-iO-PJV-Y7jJfWFFuYY_xx4XUYXMmb-S5GvRZi2ZW8w&usqp=CAU');
-//            $httpClient->post($image->getMessage());
+            $image->setMessage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4xoX55-BGtjBTQKxa3wDE01Y7-iO-PJV-Y7jJfWFFuYY_xx4XUYXMmb-S5GvRZi2ZW8w&usqp=CAU');
+            $httpClient->post($image->getMessage());
 
-//            //AUDIO
-//            $audio->setMessage('');
-//            $httpClient->post($audio->getMessage());
-//
+            //AUDIO
+            $audio->setMessage('https://tuningmania.com.br/autosom/mp3/65%20~%2069%20Hz.MP3');
+            $httpClient->post($audio->getMessage());
+
             //VIDEO
-            $video->setMessage('https://www.youtube.com/watch?v=_0ppe_koicw');
+            $video->setMessage('https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4');
             $httpClient->post($video->getMessage());
 
             return '';
