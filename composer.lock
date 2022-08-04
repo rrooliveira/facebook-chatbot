@@ -2416,12 +2416,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rrooliveira/facebook-chatbot-sdk.git",
-                "reference": "1120a1dc712e1fc88fcbc99670a51ef908917d62"
+                "reference": "a16d23230737a62cd6768aa50bdc664a9039aa3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rrooliveira/facebook-chatbot-sdk/zipball/1120a1dc712e1fc88fcbc99670a51ef908917d62",
-                "reference": "1120a1dc712e1fc88fcbc99670a51ef908917d62",
+                "url": "https://api.github.com/repos/rrooliveira/facebook-chatbot-sdk/zipball/a16d23230737a62cd6768aa50bdc664a9039aa3e",
+                "reference": "a16d23230737a62cd6768aa50bdc664a9039aa3e",
                 "shasum": ""
             },
             "require": {
@@ -2454,7 +2454,7 @@
                 "issues": "https://github.com/rrooliveira/facebook-chatbot-sdk/issues",
                 "source": "https://github.com/rrooliveira/facebook-chatbot-sdk/tree/master"
             },
-            "time": "2022-08-04T14:01:32+00:00"
+            "time": "2022-08-04T14:33:23+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
