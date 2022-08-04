@@ -38,7 +38,7 @@ class ChatBotController extends Controller
         $message = $senderMessage->getMessage();
 
         $text = new Text($recipientId);
-//        $file = new File($recipientId);
+        $file = new File($recipientId);
         $image = new Image($recipientId);
 //        $audio = new Audio($recipientId);
 //        $video = new Video($recipientId);
@@ -55,10 +55,10 @@ class ChatBotController extends Controller
             $text->setMessage($message);
             $httpClient->post($text->getMessage());
 
-//            //FILE
-//            $file->setMessage('https://www.php.net/distributions/php-8.1.9.tar.gz');
-//            $httpClient->post($file->getMessage());
-//
+            //FILE
+            $file->setMessage('https://www.php.net/distributions/php-8.1.9.tar.gz');
+            $httpClient->post($file->getMessage());
+
             //IMAGE
             $image->setMessage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4xoX55-BGtjBTQKxa3wDE01Y7-iO-PJV-Y7jJfWFFuYY_xx4XUYXMmb-S5GvRZi2ZW8w&usqp=CAU');
             $httpClient->post($image->getMessage());
